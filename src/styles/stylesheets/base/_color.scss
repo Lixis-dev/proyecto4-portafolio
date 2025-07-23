@@ -89,20 +89,23 @@ body::before {
 .hero__div::before{
   position: absolute;
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 33%;
+    height: 25%;
     background-image: url(/img/Oval.svg);
     background-repeat: no-repeat;
-    background-position-x: 300px;
-    background-position-y: 0;
     background-size: 115px;
+    background-position: center;
+    top: 150px;
+    right: -60px;
     @media (min-width: abstracts.$tablet){
-      background-position-x: 690px;
-      background-position-y: 310px;
+
+      width: 20%;
+      right: -70px;
+      top: 380px;
     }
     @media (min-width: abstracts.$desktop){
-      background-position-x: 755px;
-      background-position-y: 360px;
+      right: 465px;
+      top: 420px;
     }
     
 }
