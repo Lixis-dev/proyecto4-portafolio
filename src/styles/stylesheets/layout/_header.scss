@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts";
+
+.header {
+  padding-top: 20px;
+  padding-left: 16px;
+  @include abstracts.flex-center(20px);
+  flex-direction: column;
+
+  &__rs ul {
+    @include abstracts.flex-center(25px);
+  }
+
+  @media (min-width: abstracts.$tablet) {
+    @include abstracts.flex-left(30px, space-between);
+    padding: 30px 32px 0;
+
+    flex-direction: row;
+  }
+  @media (min-width: abstracts.$desktop) {
+    padding: 40px 165px 0;
+    &__rs ul{
+        margin-right: 30px;
+    }
+  }
+}
+
+.header__logo {
+  width: 129px;
+  @media (min-width: abstracts.$tablet) {
+    width: 172px;
+  }
+}

@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts';
+
+.button-form{
+    background-color: abstracts.$color-black2;
+    border: none;
+    text-decoration: underline 2px;
+    text-underline-offset: 10px;
+    text-decoration-color: abstracts.$color-green;
+    text-transform: uppercase;
+    @include abstracts.font-a;
+    @include abstracts.on-event {
+    color: abstracts.$color-green;
+    text-decoration: underline;
+}}

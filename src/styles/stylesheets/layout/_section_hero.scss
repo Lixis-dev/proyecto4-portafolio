@@ -1,0 +1,120 @@
+@use "../abstracts";
+
+.hero {
+  @include abstracts.flex-center(40px);
+  margin: 0 0 80px;
+  padding-top: 49px;
+  position: relative;
+  
+  &__img {
+    width: 174px;
+    height: 222px;
+    img {
+      object-fit: cover;
+    }
+  }
+  &__div {
+    padding: 0 16px 0;
+    z-index: 1;
+    @include abstracts.flex-center(24px);
+    &__title {
+        margin: 0;
+        padding-left: 16px;
+      text-align: center;
+      .under {
+        text-underline-offset: 9px;
+        text-decoration-thickness: 4px;
+      }
+    }
+    &__p {
+      text-align: center;
+    }
+  }
+}
+@media (min-width: abstracts.$tablet) {
+  .hero {
+
+    padding-top: 70px;
+    margin-top: 0;
+    margin-bottom: 72px;
+    @include abstracts.flex-left;
+    flex-direction: row;
+    &__img{
+        width: 322px;
+        height: 486px;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        overflow: hidden;
+        img{
+            width: 349px;
+            object-position: -25px;
+            
+        }   
+    }
+    &__div{
+        @include abstracts.flex-left(34px);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        &__title{
+            padding-left: 16px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 70%;
+            text-align: left;
+            gap: 10px;
+            .under{
+               text-underline-offset: 17px; 
+               text-decoration-thickness: 6px;
+            }
+        }
+        &__p{
+            width: 445px;
+            text-align: left;
+            margin-left: 16px;
+        }
+        &__a{
+          margin-left: 16px;
+        }
+    }
+  }
+}
+
+@media (min-width: abstracts.$desktop){
+    .hero{
+        margin: 73px 0 231px;
+        &__img{
+            width: 445px;
+            height: 618px;
+            right: 165px;
+            img{
+                width: 445px;
+                object-position: center;
+            }
+
+        }
+        &__div{
+            gap: 66px;
+            &__title{
+                padding-left: 146px;
+                margin-top: 57px;
+                flex-direction: row;
+                gap: 10px;
+                flex-wrap: wrap;
+                width: 65%;
+                .under{
+                   text-underline-offset: 20px; 
+                }
+            }
+            &__p{
+              padding-left: 133px;
+              width: 40%;
+            }
+            &__a{
+              padding-left: 133px;
+            }
+            
+        }
+    }
+}

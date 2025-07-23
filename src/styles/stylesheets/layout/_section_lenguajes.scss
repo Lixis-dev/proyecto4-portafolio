@@ -1,0 +1,38 @@
+@use '../abstracts';
+
+.lenguajes {
+    
+    margin: 40px 0 ;
+    padding: 0 16px;
+    @include abstracts.flex-center (24px);
+    flex-direction: column;
+    div{
+        @include abstracts.flex-center(0);
+        flex-direction: column;
+
+    }
+    @media (min-width:abstracts.$tablet){
+        padding: 0 32px;
+        margin: 52px 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        div{
+            @include abstracts.flex-left (14px);
+        }
+
+        @media (min-width:abstracts.$desktop) {
+            margin: 72px 0 60px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 58px 0;
+            padding: 0 165px;
+        }
+    }  
+
+}
+
+ @media (min-width:abstracts.$tablet){
+    .hr{
+        display: none;
+    }
+ }

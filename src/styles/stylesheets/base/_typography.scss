@@ -1,0 +1,42 @@
+@use '../abstracts';
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font-family: abstracts.$font-text;
+}
+
+h1 {
+  @include abstracts.font-h1
+}
+
+h2 {
+  @include abstracts.font-h2
+}
+
+h3 {
+  @include abstracts.font-h3
+}
+
+p {
+  @include abstracts.font-p
+}
+
+a {
+  @include abstracts.font-a
+}
+
+.proyectos__article__div__div-ul{
+  @include abstracts.font-li;
+}
+
+.contacto__formulario__form {
+  @include abstracts.font-a;
+  letter-spacing: -0.222px;
+}
+
+input, textarea {
+  text-transform: uppercase;
+}
+

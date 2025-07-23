@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts';
+
+
+.footer{
+    margin: 39px 0 44px; 
+    @include abstracts.flex-center (20px);
+    flex-direction: column;
+    &__rs ul{
+        @include abstracts.flex-center (25px);
+    }
+    @media (min-width: abstracts.$tablet){
+        padding: 0 32px;
+        @include abstracts.flex-left(30px, space-between);
+        flex-direction: row;
+    }
+    @media (min-width:abstracts.$desktop){
+        padding: 0 165px;
+    }
+}
+.footer__logo {
+
+    width: 129px;
+    @media (min-width: abstracts.$tablet){
+        width: 172px;
+    }
+}

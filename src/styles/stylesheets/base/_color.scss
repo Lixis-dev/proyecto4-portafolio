@@ -1,0 +1,124 @@
+@use "../abstracts";
+
+* {
+  color: abstracts.$color-white;
+}
+
+body {
+  position: relative;
+  background-image: linear-gradient(
+    abstracts.$color-black 83%,
+    abstracts.$color-black2 83%,
+    abstracts.$color-black2 100%
+  );
+  @media (min-width: abstracts.$tablet) {
+    background-image: linear-gradient(
+      abstracts.$color-black 75.5%,
+      abstracts.$color-black2 75.5%,
+      abstracts.$color-black2 100%
+    );
+  }
+  @media (min-width: abstracts.$desktop) {
+    background-image: linear-gradient(
+      abstracts.$color-black 84%,
+      abstracts.$color-black2 84%,
+      abstracts.$color-black2 100%
+    );
+  }
+  .page {
+    background-image: linear-gradient(
+      360deg,
+      abstracts.$color-black2 50%,
+      abstracts.$color-black 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 174px 363px;
+    background-position-x: center;
+    background-position-y: -16px;
+
+    @media (min-width: 768px) {
+      background-size: 322px 580px;
+      background-position-x: right;
+    }
+
+    @media (min-width: abstracts.$desktop) {
+      background-size: 445px 720px;
+      background-position-x: right 165px;
+    }
+  }
+}
+
+body::before {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/ovals2.svg), url(/img/ovals.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position-x: 190px, -245px;
+  background-position-y: 1255px, 4609px;
+  @media (min-width: abstracts.$tablet) {
+    background-position-x: 600px, -245px;
+    background-position-y: 1020px, 3320px;
+  }
+  @media (min-width: abstracts.$desktop) {
+    width: 1440px;
+    top: 0;
+    left: 0;
+    background-position-x: 1150px, -100px;
+    background-position-y: 1190px, 3620px;
+  }
+}
+
+.hero {
+  position: absolute;
+  background-image: url(/img/ovals.svg);
+  background-position-x: -245px;
+  background-position-y: 33px;
+  background-repeat: no-repeat;
+  @media (min-width: abstracts.$tablet) {
+    background-position-x: -165px;
+    background-position-y: 10px;
+  }
+  @media (min-width: abstracts.$desktop) {
+    background-position-x: 0px;
+    background-position-y: 63px;
+  }
+}
+.hero__div::before{
+  position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/Oval.svg);
+    background-repeat: no-repeat;
+    background-position-x: 300px;
+    background-position-y: 0;
+    background-size: 115px;
+    @media (min-width: abstracts.$tablet){
+      background-position-x: 690px;
+      background-position-y: 310px;
+    }
+    @media (min-width: abstracts.$desktop){
+      background-position-x: 755px;
+      background-position-y: 360px;
+    }
+    
+}
+
+p,
+.proyectos__article__div__div-ul {
+  color: abstracts.$color-gray;
+}
+
+.hero__div__title .under {
+  text-decoration: underline;
+  text-decoration-color: abstracts.$color-green;
+}
+
+input,
+.mensaje {
+  background-color: abstracts.$color-black2;
+  color: abstracts.$color-gray;
+}
